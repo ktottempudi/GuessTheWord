@@ -1,0 +1,9 @@
+{
+	"Description": "This deck contains a list of movies. Your teammates will attempt to give you clues while you have to guess what the word is.",
+	"data" : {
+		"1": "The Godfather",
+		"2": "The Godfather 2",
+		"3": "John Wick",
+		"4": "Jurassic Park"
+	}
+}
