@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import Description from './Description';
 import Tutorial from './Tutorial';
 import CheckOrientation from './CheckOrientation';
+import Game from './Game';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ const ScreenNavigator = () => (
 	<Screen name="Description" component={Description} />
 	<Screen name="Tutorial" component={Tutorial} />
 	<Screen name="CheckOrientation" component={CheckOrientation} />
+	<Screen name="Game" component={Game} />
 	</Navigator>
 );
 

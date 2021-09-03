@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, Dimensions} from 'react-native';
+import Game from './Game';
 
-export default function CheckOrientation(){
+export default function CheckOrientation({navigation}){
 
 	const isPortrait = () => {
 		return Dimensions.get('window').height > Dimensions.get('window').width;
@@ -17,11 +18,16 @@ export default function CheckOrientation(){
 		};
 	}, []);
 
+	const goToGame = () => {
+		if(orientation === 'Landscape'){
+			navigation.navigate('Game');
+		}
+	}
+
 	return(
 		<View>
-			<Text> To Begin the Game please orient your phone in Landscape mode. </Text>
-			<Text> {isPortrait() ? "Portrait" : "Landscape"} </Text>
-			
+			<Text> To Begin the Game please orient your phone in Landscape mode. {orientation}</Text>
+			{goToGame()}
 		</View>
 		);
 }

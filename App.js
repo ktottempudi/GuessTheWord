@@ -13,7 +13,27 @@ export default function App() {
   const Stack = createNativeStackNavigator();
   return (
     <AppNavigator/>
-
+/*    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+        />
+        <Stack.Screen 
+          name="Tutorial"
+          component={Tutorial}
+        />
+        <Stack.Screen
+          name="Description"
+          component={Description}
+         />
+      </Stack.Navigator>
+    </NavigationContainer>*/
+/*    <View style={styles.container}>
+      <Text>Welcome to the app</Text>
+      <StatusBar style="auto" />
+      {firstTime ? <Tutorial/> : <Welcome/>}
+    </View>*/
   );
 }
 
