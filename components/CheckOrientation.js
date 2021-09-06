@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, Dimensions} from 'react-native';
 import Game from './Game';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 export default function CheckOrientation({navigation}){
 
@@ -11,6 +12,7 @@ export default function CheckOrientation({navigation}){
 	const[orientation, setOrientation] = useState(isPortrait() ? 'Portraint' : 'Landscape');
 
 	useEffect(() => {
+		ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT);
 		const callback = () => setOrientation(isPortrait() ? 'Portrait' : 'Landscape');
 		Dimensions.addEventListener('change', callback);
 		return () => {
