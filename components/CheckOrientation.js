@@ -12,13 +12,16 @@ export default function CheckOrientation({navigation}){
 	const[orientation, setOrientation] = useState(isPortrait() ? 'Portraint' : 'Landscape');
 
 	useEffect(() => {
-		ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.DEFAULT);
-		const callback = () => setOrientation(isPortrait() ? 'Portrait' : 'Landscape');
+		ScreenOrientation.unlockAsync();
+		const callback = () => {setOrientation(isPortrait() ? 'Portrait' : 'Landscape')};
 		Dimensions.addEventListener('change', callback);
+		if(orientation === 'Landscape'){
+			navigation.navigate('Game');
+		}
 		return () => {
 			Dimensions.removeEventListener('change', callback);
 		};
-	}, []);
+	}, [orientation]);
 
 	const goToGame = () => {
 		if(orientation === 'Landscape'){
@@ -28,8 +31,8 @@ export default function CheckOrientation({navigation}){
 
 	return(
 		<View>
-			<Text> To Begin the Game please orient your phone in Landscape mode. {orientation}</Text>
-			{goToGame()}
+			<Text> To Begin the Game please orient your phone in Landscape mode.</Text>
+			
 		</View>
 		);
 }
