@@ -8,7 +8,6 @@ export default function Welcome({ navigation }){
 	let availabe = require('../Decks/Available Decks.json');
 
 	useEffect(() => {
-		ScreenOrientation.unlockAsync();
 		ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
 	});
 

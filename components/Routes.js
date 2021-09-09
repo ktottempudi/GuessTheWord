@@ -7,6 +7,7 @@ import Description from './Description';
 import Tutorial from './Tutorial';
 import CheckOrientation from './CheckOrientation';
 import Game from './Game';
+import * as ScreenOrientation from 'expo-screen-orientation';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -18,7 +19,9 @@ const ScreenNavigator = () => (
 	<Screen name="CheckOrientation" component={CheckOrientation} />
 	<Screen name="Game" component={Game} options={({navigation, route}) => ({
 		headerLeft: (props) => (
-				<HeaderBackButton {...props} onPress={() => navigation.navigate('Welcome')} />
+				<HeaderBackButton {...props} onPress={() => {ScreenOrientation.unlockAsync(); 
+					ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+					navigation.navigate('Welcome')}} />
 			),
 	})}/>
 	</Navigator>
