@@ -9,7 +9,9 @@ export default function Description({route, navigation}){
 		<View> 
 			<Text style={styles.textStyle}> {information[title].Description} </Text>
 			<TouchableOpacity style={styles.confirmButtonStyle} onPress={() => {
-				navigation.navigate('CheckOrientation');
+				navigation.navigate('CheckOrientation', {
+					title: title
+				});
 			}}>
 				<Text style={styles.textButtonStyle}>Ok</Text>
 			</TouchableOpacity>

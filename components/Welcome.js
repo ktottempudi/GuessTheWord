@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import {StyleSheet, Button, Text, View, Dimensions, TouchableOpacity} from 'react-native';
 import Description from './Description';
 import * as ScreenOrientation from 'expo-screen-orientation';
-//import {useNavigation} from '@react-navigation/native';
 
 export default function Welcome({ navigation }){
 	let availabe = require('../Decks/Available Decks.json');

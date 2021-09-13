@@ -2,12 +2,18 @@ import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import Welcome from './Welcome';
+import information from './FileRetrieval';
 
-export default function Game({navigation}){
+export default function Game({route, navigation}){
+
+	const {title} = route.params;
+	const deckData = information[title].data;
+	let keys = Object.keys(deckData);
 
 	const [startTimer, setStartTimer] = useState(5);
 	const [gameBegan, setGameBegan] = useState(1);
 	const [resetTimer, setResetTimer] = useState(false);
+	const [guess, setGuess] = useState(deckData[keys[Math.floor(Math.random() * keys.length)]]);
 
 	useEffect(() => {
 		ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
@@ -36,6 +42,7 @@ export default function Game({navigation}){
 		<View> 
 			<Text> In Game Screen </Text>
 			<Text> {startTimer} </Text>
+			<Text> {guess} </Text>
 		</View>
 		);
 }

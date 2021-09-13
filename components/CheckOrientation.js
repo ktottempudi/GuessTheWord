@@ -3,7 +3,9 @@ import {View, Text, Dimensions} from 'react-native';
 import Game from './Game';
 import * as ScreenOrientation from 'expo-screen-orientation';
 
-export default function CheckOrientation({navigation}){
+export default function CheckOrientation({route, navigation}){
+
+	const {title} = route.params;
 
 	const isPortrait = () => {
 		return Dimensions.get('window').height > Dimensions.get('window').width;
@@ -16,7 +18,9 @@ export default function CheckOrientation({navigation}){
 		const callback = () => {setOrientation(isPortrait() ? 'Portrait' : 'Landscape')};
 		Dimensions.addEventListener('change', callback);
 		if(orientation === 'Landscape'){
-			navigation.navigate('Game');
+			navigation.navigate('Game', {
+				title: title
+			});
 		}
 		return () => {
 			Dimensions.removeEventListener('change', callback);
