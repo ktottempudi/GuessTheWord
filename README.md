@@ -4,3 +4,4 @@
  React-Native  
  React-navigation  
  Expo-Screen-Orientation  
+ Expo-sensors  
