@@ -1,3 +1,22 @@
 {
-	"Description": "This deck will contain characters, locations, and so much more from the books and movies of Harry Potter."
+	"Description": "This deck will contain characters, locations, and so much more from the books and movies of Harry Potter.",
+	"data" : {
+		"1" : "Harry Potter",
+		"2" : "Ron Weasley",
+		"3" : "Hermione Granger",
+		"4" : "Draco Malfoy",
+		"5" : "Neville Longbottom",
+		"6" : "Albus Dumbledore",
+		"7" : "Lord Voldemort",
+		"8" : "Severus Snape",
+		"9" : "Sirius Black",
+		"10" : "Hagrid",
+		"11" : "Hogwarts",
+		"12" : "Gryffindor",
+		"13" : "Ravenclaw",
+		"14" : "Huffelpuff",
+		"15" : "Slytherin",
+		"16" : "Ministry of Magic",
+		"17" : "Accio"
+	}
 }

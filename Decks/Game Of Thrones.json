@@ -1,19 +1,21 @@
 {
 	"Description": "This deck will display characters, places, and ore from the Game Of Thrones Books and TV Show.",
-	"Cersei Lannister": "Cersei Lannister",
-	"Jon Snow": "Jon Snow",
-	"Winterfell": "Winterfell",
-	"Khal Drogo": "Khal Drogo",
-	"Iron Bank": "Iron Bank",
-	"White Walker": "White Walkers",
-	"Westerlands": "Westerlands",
-	"The Reach": "The Reach",
-	"Westeros": "Westeros",
-	"Dothraki": "Dothraki",
-	"The Vale": "The Vale",
-	"Petyr Baelish": "Petyr Baelish",
-	"Ned Stark": "Ned Stark",
-	"The Wall": "The Wall",
-	"Dragon Glass": "Dragon Glass",
-	"King's Landing": "King's Landing"
+	"data" : {
+		"1": "Cersei Lannister",
+		"2": "Jon Snow",
+		"3": "Winterfell",
+		"4": "Khal Drogo",
+		"5": "Iron Bank",
+		"6": "White Walker",
+		"7": "Westerlands",
+		"8": "The Reach",
+		"9": "Westeros",
+		"10": "Dothraki",
+		"11": "The Vale",
+		"12": "Petyr Baelish",
+		"13": "Ned Stark",
+		"14": "The Wall",
+		"15": "Dragon Glass",
+		"16": "King's Landing"
+	}
 }

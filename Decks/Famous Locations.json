@@ -1,3 +1,14 @@
 {
-	"Description": "This deck will display the names of famous locations all over the world."
+	"Description": "This deck will display the names of famous locations all over the world.",
+	"data" : {
+		"1": "Statue Of Liberty",
+		"2": "Taj Mahal",
+		"3": "Grand Canyon",
+		"4": "Great Wall of China",
+		"5": "Eiffel Tower",
+		"6": "Tower of London",
+		"7": "Great Barrier Reef",
+		"8": "Machu Picchu",
+		"9": "Pyramids of Giza"
+	}
 }
